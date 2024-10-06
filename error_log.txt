@@ -1,0 +1,1 @@
+Файл логів створено: /home/stwberry/puustovit.com/www/wp-content/plugins/wayforpay_gateway_plugin/error_log.txt
