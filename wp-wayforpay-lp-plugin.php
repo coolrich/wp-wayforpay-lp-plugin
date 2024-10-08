@@ -27,4 +27,4 @@ if (!file_exists(WFP_LOG_FILE)) {
 }
 
 // Ініціалізуємо процесор вебхуків
-add_action( 'init', 'wfp_processor' );
+add_action('init', 'wfp_webhook_handler');

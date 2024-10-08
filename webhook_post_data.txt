@@ -1,284 +1,32 @@
-User id: 46
-User email: i.domnich2013@gmail.com
-Order reference: 1212dd1
-User password: flFXGozM0H&9
-Current date: 06-10-2024 17:42:25
-Current date: 06-10-2024 17:54:09
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-
-Current date: 06-10-2024 17:57:44
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 17:58:20
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 18:03:10
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 18:20:22
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 18:22:39
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 18:35:51
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 1212dd1
-    [merchantSignature] => 984d74fa8eeb0e06d489b5306b42f7bb
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-POST data: 
-User id: 51
-User email: i.domnich2013@gmail.com
-Order reference: 
-User password: R4e7Gh%Y8e$J
-
-Current date: 06-10-2024 18:39:02
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-POST data: 
-User id: 52
-User email: i.domnich2013@gmail.com
-Order reference: 
-User password: W3GVJSvpVf@2
-
-Current date: 06-10-2024 19:07:01
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
-Current date: 06-10-2024 19:10:49
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
-
 POST data: 
 User id: 53
 User email: i.domnich2013@gmail.com
 Order reference: 
 User password: ss#Ov7dpgQKl
+
+Current date: 08-10-2024 11:16:28
+POST data: Array
+(
+    [merchantAccount] => test_merch_n1
+    [orderReference] => 8793
+    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
+    [amount] => 100
+    [currency] => UAH
+    [authCode] => 324567
+    [email] => i.domnich2013@gmail.com
+    [phone] => +38063-333-33-33
+    [createdDate] => 123456789
+    [processingDate] => 12345678
+    [cardPan] => 42****4242
+    [cardType] => Visa
+    [issuerBankCountry] => Ukraine
+    [issuerBankName] => PrivatBank
+    [recToken] => 121213321-3213213-3213213-321-3
+    [transactionStatus] => Approved
+    [reason] => Ok
+    [reasonCode] => 1100
+    [fee] => 0
+    [paymentSystem] => card
+    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
+)
 
