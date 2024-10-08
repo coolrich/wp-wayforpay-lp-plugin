@@ -15,7 +15,6 @@ function wfp_log_post_data($post_data) {
 
 // Обробка POST запитів
 function wfp_handle_post_request($post_data) {
-        wfp_log_post_data($post_data);
         wfp_signup_user($post_data); // Виклик функції для реєстрації користувача
 }
 
@@ -23,7 +22,6 @@ function wfp_handle_test_request($post_data) {
         echo 'POST Webhook received successfully' . PHP_EOL;
         echo 'Received Data: ' . PHP_EOL;
         print_r($post_data);
-        wfp_log_post_data($post_data);
 }
 
 // Основна функція для обробки запитів
@@ -35,6 +33,7 @@ function wfp_webhook_handler () {
         $post_data = json_decode($data, true);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (json_last_error() === JSON_ERROR_NONE) {
+                wfp_log_post_data($post_data);
                 switch ($_GET[WEBHOOK_NAME]) {
                     case 'wfp-signup-webhook':
                         wfp_handle_post_request($post_data);
