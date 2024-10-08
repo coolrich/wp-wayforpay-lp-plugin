@@ -8,7 +8,7 @@ if ( ! class_exists( 'LP_REST_Admin_Tools_Controller' ) ) {
 		}
 
 // Функція для реєстрації або авторизації користувача
-function wfp_signup_user($data) {
+function wfp_signup_user_handler($data) {
     if ( isset($data['orderReference']) && isset($data['email']) && isset($data['merchantSignature']) ) {
         $received_signature = $data['merchantSignature'];
         $secret_key = "0123456789"; // Замініть на свій ключ
@@ -59,4 +59,84 @@ function wfp_signup_user($data) {
         $response = $controller->assign_courses_to_users($request);
         print_r($response);
     }
+}
+
+function wfp_success_payment_handler($data){
+    echo "Success payment handler:" . PHP_EOL;
+    
+    // Перевіряємо, чи прийшли POST-дані
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'])) {
+        // Зберігаємо отримані POST-дані
+        $username = sanitize_text_field($_POST['username']); // Логін
+        $password = sanitize_text_field($_POST['password']); // Пароль
+        
+        // Відображаємо сторінку з кнопкою
+        ?>
+        <!DOCTYPE html>
+        <html lang="uk">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Перейти до курсу</title>
+            <style>
+                body {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: #f4f4f4;
+                }
+                .button-container {
+                    text-align: center;
+                }
+                button {
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="button-container">
+                <form action="" method="POST">
+                    <input type="hidden" name="username" value="<?php echo esc_attr($username); ?>">
+                    <input type="hidden" name="password" value="<?php echo esc_attr($password); ?>">
+                    <button type="submit" name="login">Перейти до курсу</button>
+                </form>
+            </div>
+        </body>
+        </html>
+        <?php
+    } else if (isset($_POST['login'])) {
+        // Якщо кнопка була натиснута, пробуємо авторизувати користувача
+        $username = sanitize_text_field($_POST['username']);
+        $password = sanitize_text_field($_POST['password']);
+        
+        // Виконуємо авторизацію на WordPress
+        $creds = array(
+            'user_login'    => $username,
+            'user_password' => $password,
+            'remember'      => true
+        );
+        
+        $user = wp_signon($creds, false);
+    
+        if (is_wp_error($user)) {
+            // Якщо авторизація невдала, виводимо повідомлення про помилку
+            echo '<p>Невдалий логін. Перевірте дані та спробуйте ще раз.</p>';
+        } else {
+            // Якщо авторизація успішна, перенаправляємо на сторінку курсів
+            wp_set_current_user($user->ID);
+            wp_set_auth_cookie($user->ID);
+            wp_redirect(home_url('/lp-profile')); // Зміна URL на вашу сторінку курсів
+            exit;
+        }
+    } else {
+        // Якщо дані не були отримані, відображаємо повідомлення
+        echo '<p>Немає POST-даних для обробки.</p>';
+    }
+}
+
+function wfp_failure_payment_handler($data){
+    echo "Failure payment handler";
 }

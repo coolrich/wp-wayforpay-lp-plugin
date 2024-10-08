@@ -13,14 +13,8 @@ function wfp_log_post_data($post_data) {
     file_put_contents(POST_DATA_FILE, "POST data: " . print_r($post_data, true) . PHP_EOL, FILE_APPEND);
 }
 
-// Обробка POST запитів
-function wfp_handle_post_request($post_data) {
-        wfp_signup_user($post_data); // Виклик функції для реєстрації користувача
-}
-
-function wfp_handle_test_request($post_data) {
-        echo 'POST Webhook received successfully' . PHP_EOL;
-        echo 'Received Data: ' . PHP_EOL;
+function wfp_test_request_handler($post_data) {
+        echo 'POST Webhook test request received successfully' . PHP_EOL;
         print_r($post_data);
 }
 
@@ -36,7 +30,7 @@ function wfp_webhook_handler () {
                 wfp_log_post_data($post_data);
                 switch ($_GET[WEBHOOK_NAME]) {
                     case 'wfp-signup-webhook':
-                        wfp_handle_post_request($post_data);
+                        wfp_signup_user_handler($post_data);
                         break;
                     
                     case 'wfp-success-payment-webhook':
@@ -48,7 +42,7 @@ function wfp_webhook_handler () {
                         break;
                     
                     case 'wfp-test-data-webhook':
-                        wfp_handle_test_request($post_data);
+                        wfp_test_request_handler($post_data);
                         break;
     
                     default:
