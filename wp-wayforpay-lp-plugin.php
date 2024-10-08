@@ -12,11 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Визначаємо шляхи до файлів плагіну
 define('WFP_LOG_FILE', __DIR__ . '/error_log.txt');
 define('POST_DATA_FILE', __DIR__ . '/webhook_post_data.txt');
-define('WEBHOOK_NAME', 'wfp_hook');
+define('WEBHOOK_NAME', 'wfp_webhook');
 
 // Підключаємо інші файли плагіну
 require_once plugin_dir_path( __FILE__ ) . 'includes/webhook-processor.php'; // Обробка вебхуків
-require_once plugin_dir_path( __FILE__ ) . 'includes/user-functions.php'; // Робота з користувачами
+require_once plugin_dir_path( __FILE__ ) . 'includes/webhook-handlers.php'; // Робота з користувачами
 require_once plugin_dir_path( __FILE__ ) . 'includes/helper-functions.php'; // Допоміжні функції
 
 // Створюємо лог файл, якщо його немає

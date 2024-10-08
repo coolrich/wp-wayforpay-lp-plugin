@@ -24,35 +24,34 @@ function wfp_webhook_handler () {
         date_default_timezone_set('Europe/Kyiv');
         file_put_contents(POST_DATA_FILE, "Current date: " . date('d-m-Y H:i:s') . PHP_EOL, FILE_APPEND);
         $data = file_get_contents('php://input');
-        $post_data = json_decode($data, true);
+        $decoded_post_data = json_decode($data, true);
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (json_last_error() === JSON_ERROR_NONE) {
-                wfp_log_post_data($post_data);
+            /*
+            $username = isset($_POST['username']) ? trim($_POST['username']) : '';
+            $password = isset($_POST['password']) ? trim($_POST['password']) : '';
+            */
+                wfp_log_post_data($decoded_post_data);
                 switch ($_GET[WEBHOOK_NAME]) {
                     case 'wfp-signup-webhook':
-                        wfp_signup_user_handler($post_data);
+                        wfp_signup_user_handler($decoded_post_data);
                         break;
                     
                     case 'wfp-success-payment-webhook':
-                        
+                        wfp_successful_payment_handler($_POST);
                         break;
                     
                     case 'wfp-failure-payment-webhook':
-                        
+                        wfp_failure_payment_handler($decoded_post_data);
                         break;
                     
                     case 'wfp-test-data-webhook':
-                        wfp_test_request_handler($post_data);
+                        wfp_test_request_handler($decoded_post_data);
                         break;
     
                     default:
                         echo 'Невідомий webhook';
                         break;
                 }
-            } else {
-                echo PHP_EOL . 'Error: Invalid JSON format';
-                wfp_log_error("Помилка декодування JSON у тестовому запиті");
-            }
         exit;
         }
     }

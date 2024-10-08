@@ -9,8 +9,13 @@ if ( ! class_exists( 'LP_REST_Admin_Tools_Controller' ) ) {
 
 // Функція для реєстрації або авторизації користувача
 function wfp_signup_user_handler($data) {
-    if ( isset($data['orderReference']) && isset($data['email']) && isset($data['merchantSignature']) ) {
+    
+    if (json_last_error() === JSON_ERROR_NONE 
+        && isset($data['orderReference']) 
+        && isset($data['email']) 
+        && isset($data['merchantSignature']) ) {
         $received_signature = $data['merchantSignature'];
+        $order_reference = $data['orderReference'];
         $secret_key = "0123456789"; // Замініть на свій ключ
         $generated_signature = generate_wayforpay_signature($data, $secret_key);
 
@@ -58,14 +63,41 @@ function wfp_signup_user_handler($data) {
         $request->set_param('data', array(['user_id' => (int)$user_id, 'course_id' => (int)$data['orderReference']]));
         $response = $controller->assign_courses_to_users($request);
         print_r($response);
+    } else {
+        echo PHP_EOL . 'Error: Invalid JSON format';
+        wfp_log_error("Помилка декодування JSON у тестовому запиті");
     }
 }
 
-function wfp_success_payment_handler($data){
-    echo "Success payment handler:" . PHP_EOL;
+function wfp_successful_payment_handler($data){
+    //echo "Success payment handler: <br>" . PHP_EOL;
     
     // Перевіряємо, чи прийшли POST-дані
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'])) {
+    if (isset($_POST['login'])) {
+        // Якщо кнопка була натиснута, пробуємо авторизувати користувача
+        $username = sanitize_text_field($_POST['username']);
+        $password = sanitize_text_field($_POST['password']);
+        
+        // Виконуємо авторизацію на WordPress
+        $creds = array(
+            'user_login'    => $username,
+            'user_password' => $password,
+            'remember'      => true
+        );
+        
+        $user = wp_signon($creds, false);
+    
+        if (is_wp_error($user)) {
+            // Якщо авторизація невдала, виводимо повідомлення про помилку
+            echo '<p>Невдалий логін. Перевірте дані та спробуйте ще раз.</p>';
+        } else {
+            // Якщо авторизація успішна, перенаправляємо на сторінку курсів
+            wp_set_current_user($user->ID);
+            wp_set_auth_cookie($user->ID);
+            wp_redirect(home_url('/lp-profile')); // Зміна URL на вашу сторінку курсів
+            exit;
+        }
+    } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'], $_POST['password'])) {
         // Зберігаємо отримані POST-дані
         $username = sanitize_text_field($_POST['username']); // Логін
         $password = sanitize_text_field($_POST['password']); // Пароль
@@ -101,36 +133,12 @@ function wfp_success_payment_handler($data){
                 <form action="" method="POST">
                     <input type="hidden" name="username" value="<?php echo esc_attr($username); ?>">
                     <input type="hidden" name="password" value="<?php echo esc_attr($password); ?>">
-                    <button type="submit" name="login">Перейти до курсу</button>
+                    <button type="submit" name="login">Перейти до профілю</button>
                 </form>
             </div>
         </body>
         </html>
         <?php
-    } else if (isset($_POST['login'])) {
-        // Якщо кнопка була натиснута, пробуємо авторизувати користувача
-        $username = sanitize_text_field($_POST['username']);
-        $password = sanitize_text_field($_POST['password']);
-        
-        // Виконуємо авторизацію на WordPress
-        $creds = array(
-            'user_login'    => $username,
-            'user_password' => $password,
-            'remember'      => true
-        );
-        
-        $user = wp_signon($creds, false);
-    
-        if (is_wp_error($user)) {
-            // Якщо авторизація невдала, виводимо повідомлення про помилку
-            echo '<p>Невдалий логін. Перевірте дані та спробуйте ще раз.</p>';
-        } else {
-            // Якщо авторизація успішна, перенаправляємо на сторінку курсів
-            wp_set_current_user($user->ID);
-            wp_set_auth_cookie($user->ID);
-            wp_redirect(home_url('/lp-profile')); // Зміна URL на вашу сторінку курсів
-            exit;
-        }
     } else {
         // Якщо дані не були отримані, відображаємо повідомлення
         echo '<p>Немає POST-даних для обробки.</p>';
