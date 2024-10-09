@@ -153,55 +153,51 @@ function wfp_successful_payment_handler(){
     }
 }
 
-function wfp_failure_payment_handler(){
-    echo "Failure payment handler";
+function wfp_failure_payment_handler() {
+    //echo "Failure payment handler";
     $data = $_POST;
-    function wfp_failure_payment_handler() {
-    // Перевіряємо, чи були передані дані POST
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($data['repayUrl'])) {
-        // Зберігаємо отримані POST-дані
-        $repayUrl = sanitize_text_field($data['repayUrl']); // URL для повторної оплати
-        
-        // Відображаємо сторінку з повідомленням про невдалу оплату та кнопкою для повторення оплати
-        ?>
-        <!DOCTYPE html>
-        <html lang="uk">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Невдала оплата</title>
-            <style>
-                body {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100vh;
-                    background-color: #f4f4f4;
-                }
-                .button-container {
-                    text-align: center;
-                }
-                button {
-                    padding: 10px 20px;
-                    font-size: 18px;
-                    cursor: pointer;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="button-container">
-                <h2>Оплата не пройшла успішно. Будь ласка, повторіть спробу.</h2>
-                <form action="<?php echo esc_url($repayUrl); ?>" method="GET">
-                    <button type="submit">Повторити оплату</button>
-                </form>
-            </div>
-        </body>
-        </html>
-        <?php
-    } else {
-        // Якщо дані не були отримані, виводимо повідомлення
-        echo '<p>Немає POST-даних для обробки.</p>';
+    // Перевірка, чи була нажата кнопка повторної оплати
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($data['redirect_url'])) {
+        // Редірект на сторінку повторної оплати
+        header("Location: " . esc_url($data['redirect_url']));
+        exit; // Завершуємо виконання скрипта
     }
-}
+    ?>
+
+    <!DOCTYPE html>
+    <html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Невдала оплата</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+            .button-container {
+                text-align: center;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="button-container">
+            <h2>Оплата не пройшла успішно. Будь ласка, повторіть спробу.</h2>
+            <form method="POST">
+                <input type="hidden" name="redirect_url" value="https://wiki.wayforpay.com/ru/wiki/default/test" required>
+                <button type="submit">Повторити оплату</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    <?php
 
 }

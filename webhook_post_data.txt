@@ -148,3 +148,45 @@ User email: i.domnich2013@gmail.com
 Order reference: 8793
 User password: f0Xh$erkuCRL
 
+Current date: 09-10-2024 12:26:48
+POST data: Array
+(
+    [repayUrl] => 
+)
+
+Current date: 09-10-2024 12:28:41
+POST data: Array
+(
+    [repayUrl] => 
+)
+
+Current date: 09-10-2024 18:02:08
+POST data: Array
+(
+    [repayUrl] => 
+)
+
+Current date: 09-10-2024 18:02:11
+POST data: Array
+(
+    [redirect_url] => 
+)
+
+Current date: 09-10-2024 18:03:28
+POST data: Array
+(
+    [repayUrl] => 
+)
+
+Current date: 09-10-2024 18:03:34
+POST data: Array
+(
+    [repayUrl] => https://wiki.wayforpay.com/ru/wiki/default/test
+)
+
+Current date: 09-10-2024 18:03:35
+POST data: Array
+(
+    [redirect_url] => https://wiki.wayforpay.com/ru/wiki/default/test
+)
+
