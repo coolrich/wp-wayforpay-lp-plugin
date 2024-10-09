@@ -1,2 +1,3 @@
 Файл логів створено: /home/stwberry/puustovit.com/www/wp-content/plugins/wayforpay_gateway_plugin/error_log.txt
 Помилка декодування JSON у тестовому запиті
+Помилка створення користувача: На жаль, це ім'я користувача вже існує!
