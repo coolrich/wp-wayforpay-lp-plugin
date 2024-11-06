@@ -16,7 +16,7 @@ function wfp_signup_user_handler() {
         
         $received_signature = $data['merchantSignature'];
         $order_reference = $data['orderReference'];
-        $secret_key = "0123456789"; // Замініть на свій ключ
+        $secret_key = "flk3409refn54t54t*FNJRET"; // Замініть на свій ключ
         $generated_signature = generate_wayforpay_signature($data, $secret_key);
 
         if (!hash_equals($received_signature, $generated_signature)) {

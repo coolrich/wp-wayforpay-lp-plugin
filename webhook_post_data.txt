@@ -1,192 +1,331 @@
-Current date: 09-10-2024 11:25:38
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0.0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
+Current date: 11-10-2024 19:47:06
+Current date: 11-10-2024 19:47:06
+Response from WFP:     <script type="text/javascript">
+        top.postMessage('WfpWidgetEventLoaded', '*');
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta charset="UTF-8"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+        <title></title>
+    <link href="/assets/c691c246/css/bootstrap.min.css?v=1620292887" rel="stylesheet">
+<link href="/assets/e24edcdb/overlay.css?v=1620292889" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;display=swap&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+<link href="/assets/7010ddd8/fonts.css?v=1620292888" rel="stylesheet">
+<link href="/assets/7010ddd8/base.css?v=1720092676" rel="stylesheet">
+<link href="/assets/7010ddd8/header.css?v=1620292888" rel="stylesheet">
+<link href="/assets/7010ddd8/footer.css?v=1675324130" rel="stylesheet">
+<link href="/assets/7010ddd8/forms.css?v=1714987797" rel="stylesheet">
+<link href="/assets/7010ddd8/methods.css?v=1620292888" rel="stylesheet">
+<link href="/assets/7010ddd8/buttons.css?v=1714729638" rel="stylesheet">
+<link href="/assets/7010ddd8/controls.css?v=1685701641" rel="stylesheet">
+<link href="/assets/7010ddd8/desktop.css?v=1675324112" rel="stylesheet">
+<style>
+:root {
+    --color-bg: #eef7fe;
+    --color-accent: #018FFC;
+    --color-accent-hover: #007be8;
+}
 
-Current date: 09-10-2024 11:26:24
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0.0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
+body.body-full-width.body-single {                
+    background: #eef7fe;
+    background: linear-gradient(0.25turn, #eef7fe, #ffffff, #ffffff, #ffffff, #eef7fe);
+}
 
-User id: 61
-User email: i.domnich2013@gmail.com
-Order reference: 8793
-User password: IkqRsrT^%W)J
+body.body-full-width.body-twin:after {
+    background: #eef7fe;
+}
 
-Current date: 09-10-2024 11:58:02
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0.0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
+.schema-custom .control-label {
+    color: #333333;
+}            
+            
+.schema-custom a,
+.schema-custom .pay-form-info .btn .caret,
+.schema-custom .pay-menu .other,
+.schema-custom .form-group a.popover-sign,
+.schema-custom .form-group a:hover,
+.schema-custom .form-group a:focus,
+.schema-custom .active > .col-left.control-label,
+.schema-custom .prices .price,
+.schema-custom .kv-date-calendar .glyphicon,
+.schema-custom .amount-total,
+.schema-custom .form-group.active .control-label{
+    color: #018FFC;
+}
 
-User id: 62
-User email: i.domnich2013@gmail.com
-Order reference: 8793
-User password: 8Qto2g^92k@N
+.schema-custom .btn-primary {
+    background: #018FFC;
+    border-color: #018FFC;
+    color: white !important;
+}
 
-Current date: 09-10-2024 12:13:54
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0.0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
+.schema-custom .btn-primary:hover,
+.schema-custom .btn-primary:focus,
+.schema-custom .btn-primary:active:focus,
+.schema-custom .btn-primary.active:focus,
+.schema-custom .btn-primary.processing {
+    background: #007be8 !important;
+    border-color: #007be8 !important;
+}
 
-User id: 63
-User email: i.domnich2013@gmail.com
-Order reference: 8793
-User password: vLF3Kw6g$tXZ
+.schema-custom .btn-primary.disabled,
+.schema-custom .btn-primary.disabled:hover,
+.schema-custom .btn-primary.disabled:active,
+.schema-custom .btn-primary.disabled:focus {
+    background: #c9ffff !important;
+    border-color: #c9ffff !important;
+}
 
-Current date: 09-10-2024 12:14:46
-POST data: Array
-(
-    [merchantAccount] => test_merch_n1
-    [orderReference] => 8793
-    [merchantSignature] => 8ec718c63a28c41f0fd168f20654db6e
-    [amount] => 100
-    [currency] => UAH
-    [authCode] => 324567
-    [email] => i.domnich2013@gmail.com
-    [phone] => +38063-333-33-33
-    [createdDate] => 123456789
-    [processingDate] => 12345678
-    [cardPan] => 42****4242
-    [cardType] => Visa
-    [issuerBankCountry] => Ukraine
-    [issuerBankName] => PrivatBank
-    [recToken] => 121213321-3213213-3213213-321-3
-    [transactionStatus] => Approved
-    [reason] => Ok
-    [reasonCode] => 1100
-    [fee] => 0.0
-    [paymentSystem] => card
-    [repayUrl] => https://hpp.psp.loc/repay/40aef950b5dc8dbb6c9e670e45af0f56
-)
+.schema-custom .btn-wfp.btn-cancel {
+    color: #018FFC !important;
+}
 
-User id: 64
-User email: i.domnich2013@gmail.com
-Order reference: 8793
-User password: f0Xh$erkuCRL
+.schema-custom .btn-wfp.btn-cancel:hover,
+.schema-custom .btn-wfp.btn-cancel:focus,
+.schema-custom .btn-wfp.btn-cancel:active {
+    color: #007be8 !important;
+}
 
-Current date: 09-10-2024 12:26:48
-POST data: Array
-(
-    [repayUrl] => 
-)
+.schema-custom .btn-slave {
+    border-color: #018FFC !important;
+    color: #018FFC !important;
+}
 
-Current date: 09-10-2024 12:28:41
-POST data: Array
-(
-    [repayUrl] => 
-)
+.schema-custom .btn-slave:hover,
+.schema-custom .btn-slave:focus,
+.schema-custom .btn-slave:active {
+    background-color: #018FFC !important;
+    border-color: #018FFC !important;
+    color: white !important;
+}
 
-Current date: 09-10-2024 18:02:08
-POST data: Array
-(
-    [repayUrl] => 
-)
+.schema-custom.mode-compact .pay-form .row .form-control:focus {
+    border-bottom-color: #018FFC;
+}
 
-Current date: 09-10-2024 18:02:11
-POST data: Array
-(
-    [redirect_url] => 
-)
+.schema-custom .lang .dropdown-menu > li.active > a {
+    background: #018FFC;
+}
 
-Current date: 09-10-2024 18:03:28
-POST data: Array
-(
-    [repayUrl] => 
-)
+.schema-custom .row .form-control:focus, 
+.schema-custom .row-card .form-control:focus, 
+.schema-custom .form-group.active .form-control {
+    border-bottom-color: #018FFC !important;
+}
 
-Current date: 09-10-2024 18:03:34
-POST data: Array
-(
-    [repayUrl] => https://wiki.wayforpay.com/ru/wiki/default/test
-)
+.schema-custom .tokenize .card-number-wrapper .dropdown-menu li a.token-show-doubt, 
+.schema-custom .tokenize .card-number-wrapper .dropdown-menu li a.token-clear-input,
+.schema-custom .btn .caret,
+.schema-custom .footer .nav-lang-caret{
+    color: #018FFC;
+}
 
-Current date: 09-10-2024 18:03:35
-POST data: Array
-(
-    [redirect_url] => https://wiki.wayforpay.com/ru/wiki/default/test
-)
+.schema-custom .tokenize .card-number-wrapper .dropdown-menu li.active a.token-choose-item:after {
+    background: #018FFC;
+}
 
+.schema-custom .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-top-color: #018FFC;
+}
+.schema-custom .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-bottom-color: #018FFC;
+}
+
+.schema-custom .select-wrapper:before {
+    color: #018FFC;
+}
+
+.schema-custom .onoffswitch-inner:before {
+    background: #018FFC;
+}
+
+.body-twin .schema-custom .pay-button-delimiter .caption {
+    background: #eef7fe;
+}
+
+.schema-custom .has-error .control-label,
+.schema-custom .has-error .control-sublabel {
+    color: #de2d03;
+}
+
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active.highlighted:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active.highlighted.active {
+    background: #018FFC !important;
+    border-color: #018FFC !important;
+    color: white !important;
+}
+
+.schema-custom .pay-menu.inline .nav-pills>li.active>a {
+    border-radius: 0;
+    border-bottom: 3px solid #007be8;
+}
+
+.schema-custom .form-group-radio input:checked:after {
+    background: #018FFC !important;
+}
+
+/*.body-full-width.body-single .pay-buttons .btn-wfp.btn-install,
+.body-mobile .pay-buttons .btn-wfp.btn-install,
+.body-widget .pay-buttons .btn-wfp.btn-install {
+    background: #eef7fe !important;
+}*/
+</style>
+<script src="/assets/d9adeef2/jquery.js?v=1620292887"></script>
+<script src="/assets/1ec6f55b/yii.js?v=1620292888"></script></head>
+<body class="loader body-full-width body-single " data-vkh="6709568a-62a8-495f-93c6-021722d1dba8">
+
+
+
+<div class="wrapper-full-width mode-normal schema-custom">
+
+    
+    
+
+<div class="logo-bar">
+            <img class="logo logo-default"
+             src="/img/logo-header.png"
+             title=""
+        >
+    </div>
+
+<style>
+    .logo-bar img.logo {
+        height: 64px;
+    }
+</style>
+    <div class="container content">
+        <style>
+    .system-alert {
+        display: none !important;
+    }
+</style>
+
+<!-- CONTENT -->
+<div id="page-wrapper" class="closing-wrapper">
+
+    <div class="text-center">
+        <h3 class="title text-danger">
+            Unable to make a payment<br/>
+            <small>(1112) Duplicate Order ID</small>
+        </h3>
+    </div>
+
+    <div class="form-actions text-center">
+                    <a href="https://secure.wayforpay.com/return?vkh=6709568a-62a8-495f-93c6-021722d1dba8" id="btn-go-back"
+               class="btn btn-primary btn-wfp btn-lg wfp-widget-close-btn">
+                Return to site            </a>
+            </div>
+
+</div>
+<!-- CONTENT END; -->
+    </div>
+
+        <div class="footer footer-light">
+        <div class="container">
+            <div class="footer-delimiter"></div>
+            <!-- LOGO -->
+                        <!-- END LOGO -->
+
+            <!-- CIRCLE ICONS -->
+            <div class="contacts d-table">
+                <span class="caption d-table-cell">Support WayForPay 24/7:</span>
+                <a class="contact" target="_blank" href="https://t.me/WFPsupport_bot" title="WayForPay">
+                    <img src="/img/support/dsk-telegram.png">
+                </a>
+                <a class="contact" target="_blank" href="viber://pa?chatURI=wayforpay&context=support&text=hello" title="WayForPay">
+                    <img src="/img/support/dsk-viber.png">
+                </a>
+                <a class="contact" target="_blank" href="https://m.me/wayforpay" title="WayForPay">
+                    <img src="/img/support/dsk-messenger.png">
+                </a>
+            </div>
+            <!-- END CIRCLE ICONS -->
+
+            <!-- SUPPORT -->
+            <div class="support">
+                <div>
+                    <a class="contact" href="/cdn-cgi/l/email-protection#56252326263924221621372f30392426372f7835393b" title="WayForPay">
+                        <span class="__cf_email__" data-cfemail="17646267677865635760766e71786567766e3974787a">[email&#160;protected]</span>                    </a>
+                </div>
+                <div>
+                    <a class="contact" href="tel:+38 (044) 379 48 49" title="WayForPay">
+                        +38 (044) 379 48 49                    </a>
+                </div>
+            </div>
+            <!-- END SUPPORT -->
+
+            <!-- LANG -->
+                            <div class="dropup lang">
+                    <button class="nav-lang-selector dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        English                        <span class="caret nav-lang-caret" style="top:10px;"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2" style="font-size:12px;">
+                                                    <li class="">
+                                <a href="#" data-lang="cs">Česky</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="de">Deutsch</a>
+                            </li>
+                                                    <li class="active">
+                                <a href="#" data-lang="en">English</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="es">Español</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="fr">Français</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="it">Italiano</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="lv">Latviešu</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="pl">Polski</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="ro">Română</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="sk">Slovenčina</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="ru">Русский</a>
+                            </li>
+                                                    <li class="">
+                                <a href="#" data-lang="ua">Українська</a>
+                            </li>
+                                            </ul>
+                </div>
+                        <!-- END LANG -->
+        </div>
+    </div>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/1d56837e/js/app.extension.js?v=1726079399"></script>
+<script type="text/javascript">    $('#nav-lang-selector').change(function () {
+        if (Utils !== undefined) {
+            var url = [location.protocol, '//', location.host, location.pathname].join('');
+            url = url + '?lang=' + this.value;
+            location.href = Utils.safeUrl(url);
+        }
+    });
+    $('.lang .dropdown-menu li a').click(function () {
+        Utils.changeLang($(this).attr('data-lang'));
+    });</script></body>
+</html>
+
+Response from WFP: 
+Current date: 11-10-2024 19:48:21
+Response from WFP: 
+Current date: 11-10-2024 19:48:22
+Response from WFP: 
